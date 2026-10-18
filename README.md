@@ -1,11 +1,23 @@
 # curriculum
 
-Codice che accompagna i video pubblici di [luca4j](https://www.youtube.com/@luca4j).
+Codice dei video pubblici di [luca4j](https://www.youtube.com/@luca4j).
 
-Una directory per lezione, un tag `day-NNN` quando la lezione esce. Il tag non si riscrive: una correzione è un commit successivo su `main`.
+È l'unico repository pubblico del codice. Il profilo dell'organizzazione è [luca4j/.github](https://github.com/luca4j/.github). Il sito è [www.luca4j.com](https://www.luca4j.com).
 
-I materiali non ancora pubblicati non stanno qui. Stanno nel repository privato `studio`. I corsi dell'Academy stanno nel repository privato `academy`.
+## Un commit per video
 
-La baseline didattica si scrive in `versions.toml` il giorno in cui nasce il primo esercizio. Fino a quel giorno questo repository non contiene codice di una lezione.
+Quando un video esce, il codice di quella lezione entra su `main` con un solo commit. Il messaggio del commit è il titolo del video. I file stanno in `video/NNN-titolo-breve/`.
 
-Non è concessa una licenza di riuso oltre a quella che accompagnerà, esplicitamente, il codice di ogni lezione.
+Il commit della lezione non si riscrive. Una correzione è un commit successivo, e il messaggio cita il video.
+
+Non si anticipa il codice prima della pubblicazione del video. Finché un video non esce, questo repository non contiene quella lezione.
+
+## I file video
+
+I file video non stanno qui. Niente `.mp4`, `.mov`, `.mkv` o altri binari video. Il repository resta codice e testo.
+
+I file del canale stanno nel bucket privato Cloudflare R2 `luca4j-video`. Il video si guarda su YouTube.
+
+## Licenza
+
+Non c'è una licenza di riuso generale. Se una lezione ne ha una, è scritta nel commit di quella lezione.
