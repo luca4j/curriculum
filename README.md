@@ -6,7 +6,7 @@ Codice dei video pubblici di [luca4j](https://www.youtube.com/@luca4j).
 
 ## Un commit per video
 
-Quando un video esce, il codice di quella lezione entra su `main` con un solo commit. Il messaggio del commit è il titolo del video. I file stanno in `video/NNN-titolo-breve/`.
+Quando un video esce, il codice di quella lezione entra su `main` con un solo commit. Per la serie sul linguaggio il messaggio è `linguaggio NN titolo breve` e il codice sta in `linguaggio/src/`.
 
 Il commit della lezione non si riscrive. Una correzione è un commit successivo, e il messaggio cita il video.
 
