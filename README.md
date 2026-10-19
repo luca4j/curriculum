@@ -12,6 +12,24 @@ Il commit della lezione non si riscrive. Una correzione è un commit successivo,
 
 Non si anticipa il codice prima della pubblicazione del video. Finché un video non esce, questo repository non contiene quella lezione.
 
+## Versioni del codice delle lezioni
+
+Il repository evolve insieme al percorso video.
+
+Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 02 — print e println**.
+
+Per recuperare il codice della **lezione 01 — Il primo programma**, puoi consultare il commit:
+
+[`9ee5a79`](https://github.com/luca4j/curriculum/commit/9ee5a79)
+
+In quella versione il programma stampa:
+
+```
+Hello World! Java
+```
+
+Le lezioni successive continueranno a utilizzare il repository pubblico, mantenendo la cronologia Git delle modifiche.
+
 ## I file video
 
 I file video non stanno qui. Niente `.mp4`, `.mov`, `.mkv` o altri binari video. Il repository resta codice e testo.
