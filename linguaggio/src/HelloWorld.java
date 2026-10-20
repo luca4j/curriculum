@@ -1,5 +1,7 @@
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello World!\r\\\"Java\"\nHello World!");
+        String message = "Hello World!";
+        String language = "Java";
+        System.out.println(message + " " + language);
     }
 }

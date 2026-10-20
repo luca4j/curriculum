@@ -16,7 +16,11 @@ Non si anticipa il codice prima della pubblicazione del video. Finché un video 
 
 Il repository evolve insieme al percorso video.
 
-Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 02 — print e println**.
+Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 03 — Le stringhe**: dichiara due variabili `String` e le concatena per stampare `Hello World! Java`.
+
+Video della lezione: [Java: le stringhe e come utilizzarle](https://www.youtube.com/watch?v=0WzbW0KLMYs).
+
+Per recuperare il codice della **lezione 02 — print e println**, puoi consultare il commit [`d9e9816`](https://github.com/luca4j/curriculum/commit/d9e9816).
 
 Per recuperare il codice della **lezione 01 — Il primo programma**, puoi consultare il commit:
 
