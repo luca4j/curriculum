@@ -1,7 +1,10 @@
 public class HelloWorld {
     public static void main(String[] args) {
         String message = "Hello World!";
-        String language = "Java";
-        System.out.println(message + " " + language);
+        char J = 'J';
+        char a = 'a';
+        char v = 'v';
+        String language = "" + J + a + v + a;
+        System.out.println(message + " " + language + " " + '☕');
     }
 }

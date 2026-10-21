@@ -16,9 +16,13 @@ Non si anticipa il codice prima della pubblicazione del video. Finché un video 
 
 Il repository evolve insieme al percorso video.
 
-Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 03 — Le stringhe**: dichiara due variabili `String` e le concatena per stampare `Hello World! Java`.
+Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 04 — char, caratteri e Unicode**: dichiara tre variabili `char`, le concatena partendo da una stringa vuota e stampa `Hello World! Java ☕`.
 
-Video della lezione: [Java: le stringhe e come utilizzarle](https://www.youtube.com/watch?v=0WzbW0KLMYs).
+Video della lezione: [Java: char, caratteri e Unicode](https://www.youtube.com/watch?v=coJW0Qo6jOM).
+
+Per recuperare il codice della **lezione 03 — Le stringhe**, puoi consultare il commit [`985e2e0`](https://github.com/luca4j/curriculum/commit/985e2e0).
+
+Nota: `char` rappresenta un'unità UTF-16 a 16 bit; alcuni caratteri Unicode richiedono due `char`. `String` è un tipo non primitivo. Il simbolo `☕` dell'esempio è rappresentabile con un solo `char`.
 
 Per recuperare il codice della **lezione 02 — print e println**, puoi consultare il commit [`d9e9816`](https://github.com/luca4j/curriculum/commit/d9e9816).
 
