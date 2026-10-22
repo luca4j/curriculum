@@ -16,13 +16,17 @@ Non si anticipa il codice prima della pubblicazione del video. Finché un video 
 
 Il repository evolve insieme al percorso video.
 
-Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 04 — char, caratteri e Unicode**: dichiara tre variabili `char`, le concatena partendo da una stringa vuota e stampa `Hello World! Java ☕`.
+Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 05 — Numeri interi, divisione e resto**: converte 1234 secondi in 20 minuti e 34 secondi rimanenti usando `/` e `%`, poi ricompone il totale. Il programma stampa `20`, `34` e `1234` su tre righe.
 
-Video della lezione: [Java: char, caratteri e Unicode](https://www.youtube.com/watch?v=coJW0Qo6jOM).
+Video della lezione: [Java: numeri interi, divisione e resto](https://www.youtube.com/watch?v=GcPdVHQfIZ8).
+
+Nota alla lezione 05: `byte` usa 8 bit e rappresenta 256 valori, da -128 a 127 inclusi. `%` restituisce il resto, non la parte decimale del quoziente; la divisione intera tronca verso zero.
+
+Per recuperare il codice della **lezione 04 — char, caratteri e Unicode**, puoi consultare il commit [`63d7ecc`](https://github.com/luca4j/curriculum/commit/63d7ecc).
 
 Per recuperare il codice della **lezione 03 — Le stringhe**, puoi consultare il commit [`985e2e0`](https://github.com/luca4j/curriculum/commit/985e2e0).
 
-Nota: `char` rappresenta un'unità UTF-16 a 16 bit; alcuni caratteri Unicode richiedono due `char`. `String` è un tipo non primitivo. Il simbolo `☕` dell'esempio è rappresentabile con un solo `char`.
+Nota alla lezione 04: `char` rappresenta un'unità UTF-16 a 16 bit; alcuni caratteri Unicode richiedono due `char`. `String` è un tipo non primitivo. Il simbolo `☕` dell'esempio è rappresentabile con un solo `char`.
 
 Per recuperare il codice della **lezione 02 — print e println**, puoi consultare il commit [`d9e9816`](https://github.com/luca4j/curriculum/commit/d9e9816).
 
