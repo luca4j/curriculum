@@ -16,9 +16,24 @@ Non si anticipa il codice prima della pubblicazione del video. Finché un video 
 
 Il repository evolve insieme al percorso video.
 
-Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 05 — Numeri interi, divisione e resto**: converte 1234 secondi in 20 minuti e 34 secondi rimanenti usando `/` e `%`, poi ricompone il totale. Il programma stampa `20`, `34` e `1234` su tre righe.
+Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 06 — float, double e confronti con tolleranza**. Dichiaro un `float` e un `double`, sommo `0.1 + 0.2`, confronto il risultato con `0.3` e uso `Math.abs` con una tolleranza assoluta di `1e-9`.
 
-Video della lezione: [Java: numeri interi, divisione e resto](https://www.youtube.com/watch?v=GcPdVHQfIZ8).
+Video della lezione: [Java: float, double e confronti con tolleranza](https://www.youtube.com/watch?v=2uJ2n4yWR-o).
+
+Il programma stampa:
+
+```text
+1.0
+0.30000000000000004
+false
+true
+```
+
+Nota alla lezione 06: `float` ha 24 bit di precisione nel significando (circa 6–7 cifre decimali), `double` ne ha 53 (circa 15–16). Il risultato dell'esempio è deterministico. La tolleranza non elimina gli errori e non rende la precisione illimitata: va scelta in base al problema e alla scala dei valori. Il commento `// 0.3` nel sorgente conserva l'aspettativa matematica mostrata nel video; l'output effettivo è quello riportato sopra.
+
+Riferimento: [Java Language Specification, Floating-Point Types and Values](https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html#jls-4.2.3).
+
+Per recuperare il codice della **lezione 05 — Numeri interi, divisione e resto**, puoi consultare il commit [`c09cf19`](https://github.com/luca4j/curriculum/commit/c09cf199868ddc792007d9ef3089232136b6c9b1).
 
 Nota alla lezione 05: `byte` usa 8 bit e rappresenta 256 valori, da -128 a 127 inclusi. `%` restituisce il resto, non la parte decimale del quoziente; la divisione intera tronca verso zero.
 

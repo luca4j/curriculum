@@ -1,10 +1,11 @@
 public class HelloWorld {
     public static void main(String[] args) {
-        int secondi = 1234;
-        int minuti = secondi / 60;
-        int secondiRimanenti = secondi % 60;
-        System.out.println(minuti);
-        System.out.println(secondiRimanenti); // 34
-        System.out.println(minuti * 60 + secondiRimanenti); // 1234
+        double e = 1e-9; // 0.000000001
+        float a = 1.0f;
+        double b = 0.1 + 0.2; // 0.3
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println((0.1 + 0.2) == 0.3);
+        System.out.println(Math.abs((0.1 + 0.2) - 0.3) < e);
     }
 }
