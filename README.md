@@ -16,17 +16,15 @@ Non si anticipa il codice prima della pubblicazione del video. Finché un video 
 
 Il repository evolve insieme al percorso video.
 
-Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 07 — boolean, if e else — decidere con le condizioni**. Uso due variabili `boolean`, combino il confronto esatto e quello con tolleranza con l'operatore OR (`||`) e scelgo il ramo da eseguire con `if` ed `else`.
+Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 08 — Il ciclo for e i numeri pari**. Uso un ciclo `for` con inizializzazione `int i = 0`, condizione `i < 100` e incremento `i++`. All'interno del ciclo, `if(i % 2 == 0)` seleziona i numeri pari.
 
-Video della lezione: [Java: boolean, if e else — decidere con le condizioni](https://www.youtube.com/watch?v=O_e_CJMNplY).
+Video della lezione: [Java: il ciclo for e i numeri pari](https://www.youtube.com/watch?v=RQEKOTVci7U).
 
-Il programma stampa:
+Il programma stampa 50 righe: tutti i numeri pari da `0` a `98`, uno per riga. Il ciclo visita i valori da `0` a `99`; quando `i` raggiunge `100`, la condizione diventa falsa. L'operatore `%` restituisce il resto della divisione intera.
 
-```text
-1.0
-0.30000000000000004
-Sono uguali
-```
+Riferimenti: [Think Java, capitolo 6, sezione 6.3](https://chrismayfield.github.io/ThinkJava2/ch06.html) e [Java Language Specification, ciclo for](https://docs.oracle.com/javase/specs/jls/se25/html/jls-14.html#jls-14.14.1).
+
+Per recuperare il codice della **lezione 07 — boolean, if e else — decidere con le condizioni**, puoi consultare il commit [`0f89685`](https://github.com/luca4j/curriculum/commit/0f896855c1135e3f59108216d9f10bb0ab1bed8b). In quella versione il programma stampa `1.0`, `0.30000000000000004` e `Sono uguali`.
 
 Nota alla lezione 07: il confronto esatto produce `false`, mentre la differenza assoluta è minore di `1e-9`. L'OR è vero se almeno una condizione è vera, anche quando lo sono entrambe. Il messaggio “Sono uguali” indica quindi l'accettazione della differenza entro la tolleranza scelta, non l'identità dei valori `double`.
 
