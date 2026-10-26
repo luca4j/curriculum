@@ -16,18 +16,23 @@ Non si anticipa il codice prima della pubblicazione del video. Finché un video 
 
 Il repository evolve insieme al percorso video.
 
-Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 06 — float, double e confronti con tolleranza**. Dichiaro un `float` e un `double`, sommo `0.1 + 0.2`, confronto il risultato con `0.3` e uso `Math.abs` con una tolleranza assoluta di `1e-9`.
+Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 07 — boolean, if e else — decidere con le condizioni**. Uso due variabili `boolean`, combino il confronto esatto e quello con tolleranza con l'operatore OR (`||`) e scelgo il ramo da eseguire con `if` ed `else`.
 
-Video della lezione: [Java: float, double e confronti con tolleranza](https://www.youtube.com/watch?v=2uJ2n4yWR-o).
+Video della lezione: [Java: boolean, if e else — decidere con le condizioni](https://www.youtube.com/watch?v=O_e_CJMNplY).
 
 Il programma stampa:
 
 ```text
 1.0
 0.30000000000000004
-false
-true
+Sono uguali
 ```
+
+Nota alla lezione 07: il confronto esatto produce `false`, mentre la differenza assoluta è minore di `1e-9`. L'OR è vero se almeno una condizione è vera, anche quando lo sono entrambe. Il messaggio “Sono uguali” indica quindi l'accettazione della differenza entro la tolleranza scelta, non l'identità dei valori `double`.
+
+Riferimenti: [Think Java, capitolo 5](https://chrismayfield.github.io/ThinkJava2/ch05.html), [Java Language Specification, if](https://docs.oracle.com/javase/specs/jls/se25/html/jls-14.html#jls-14.9) e [OR logico](https://docs.oracle.com/javase/specs/jls/se25/html/jls-15.html#jls-15.24).
+
+Per recuperare il codice della **lezione 06 — float, double e confronti con tolleranza**, puoi consultare il commit [`6f93b17`](https://github.com/luca4j/curriculum/commit/6f93b173e477ae1376d284cca837827aeaeefcea). In quella versione, dopo i due valori numerici, il programma stampa `false` e `true`.
 
 Nota alla lezione 06: `float` ha 24 bit di precisione nel significando (circa 6–7 cifre decimali), `double` ne ha 53 (circa 15–16). Il risultato dell'esempio è deterministico. La tolleranza non elimina gli errori e non rende la precisione illimitata: va scelta in base al problema e alla scala dei valori. Il commento `// 0.3` nel sorgente conserva l'aspettativa matematica mostrata nel video; l'output effettivo è quello riportato sopra.
 
