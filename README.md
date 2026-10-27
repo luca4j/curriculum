@@ -16,13 +16,23 @@ Non si anticipa il codice prima della pubblicazione del video. Finché un video 
 
 Il repository evolve insieme al percorso video.
 
-Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 09 — Il ciclo while e il confronto con for**. Riscrivo con `while` l'esempio della lezione precedente: inizializzo `int i = 0` prima del ciclo, controllo `i < 100` e incremento `i` con `i++` alla fine del blocco. L'incremento resta fuori dall'`if`, così avviene anche per i numeri dispari.
+Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 10 — Scorrere una stringa e ricostruire un numero**.
 
-Video della lezione: [Java: il ciclo while e il confronto con for](https://www.youtube.com/watch?v=Q2XqtJ0ClUw).
+Video della lezione: [Java: scorrere una stringa e ricostruire un numero](https://www.youtube.com/watch?v=7vbBnrpDYfQ).
 
-Il programma stampa 50 righe: tutti i numeri pari da `0` a `98`, uno per riga. Il filtro `if(i % 2 == 0)` conserva lo stesso risultato della lezione 08. La condizione del `while` viene valutata prima di ogni iterazione: se è falsa già al primo controllo, il corpo non viene eseguito.
+Parto dalla stringa `"1234"` e leggo le cifre dalla fine con `charAt(i)`: `i` parte da `stringa.length() - 1` e diminuisce fino a `0` incluso. Il secondo contatore `j` parte da `0` e aumenta. `Character.getNumericValue` restituisce il valore numerico della cifra; `Math.pow(10, j)`, convertito a `int`, fornisce il peso delle unità, decine, centinaia e migliaia. `num` accumula questi contributi.
 
-Riferimenti: [Think Java, capitolo 6, sezione 6.1](https://chrismayfield.github.io/ThinkJava2/ch06.html) e [Java Language Specification, ciclo while](https://docs.oracle.com/javase/specs/jls/se25/html/jls-14.html#jls-14.12).
+Il sorgente finale stampa una sola riga:
+
+```text
+1234
+```
+
+Durante il video visualizzo anche risultati intermedi. Nel file finale la `println` è fuori dal ciclo. È un esercizio sulla stringa mostrata, non un convertitore generale: il programma non valida segni, separatori, caratteri non numerici o overflow. `length()` conta unità UTF-16 e `charAt()` ne legge una; per le cifre dell'esempio ogni carattere occupa una sola unità.
+
+Riferimenti: [Think Java, capitolo 6, sezione 6.7](https://chrismayfield.github.io/ThinkJava2/ch06.html), [Character.getNumericValue](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Character.html#getNumericValue(char)) e [Math.pow](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Math.html#pow(double,double)).
+
+Per recuperare il codice della **lezione 09 — Il ciclo while e il confronto con for**, puoi consultare il commit [`4129241`](https://github.com/luca4j/curriculum/commit/412924187b2b831fd2387c46e25006fd7d9d807c). In quella versione `while` visita i valori da `0` a `99` e l'`if` seleziona i 50 numeri pari da `0` a `98`.
 
 Per recuperare il codice della **lezione 08 — Il ciclo for e i numeri pari**, puoi consultare il commit [`7bbf320`](https://github.com/luca4j/curriculum/commit/7bbf320d07572c84cb4e287a7fb31b8b8fd90a47). In quella versione il ciclo `for` visita i valori da `0` a `99` e stampa i numeri pari da `0` a `98`.
 
