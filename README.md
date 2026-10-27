@@ -16,13 +16,15 @@ Non si anticipa il codice prima della pubblicazione del video. Finché un video 
 
 Il repository evolve insieme al percorso video.
 
-Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 08 — Il ciclo for e i numeri pari**. Uso un ciclo `for` con inizializzazione `int i = 0`, condizione `i < 100` e incremento `i++`. All'interno del ciclo, `if(i % 2 == 0)` seleziona i numeri pari.
+Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 09 — Il ciclo while e il confronto con for**. Riscrivo con `while` l'esempio della lezione precedente: inizializzo `int i = 0` prima del ciclo, controllo `i < 100` e incremento `i` con `i++` alla fine del blocco. L'incremento resta fuori dall'`if`, così avviene anche per i numeri dispari.
 
-Video della lezione: [Java: il ciclo for e i numeri pari](https://www.youtube.com/watch?v=RQEKOTVci7U).
+Video della lezione: [Java: il ciclo while e il confronto con for](https://www.youtube.com/watch?v=Q2XqtJ0ClUw).
 
-Il programma stampa 50 righe: tutti i numeri pari da `0` a `98`, uno per riga. Il ciclo visita i valori da `0` a `99`; quando `i` raggiunge `100`, la condizione diventa falsa. L'operatore `%` restituisce il resto della divisione intera.
+Il programma stampa 50 righe: tutti i numeri pari da `0` a `98`, uno per riga. Il filtro `if(i % 2 == 0)` conserva lo stesso risultato della lezione 08. La condizione del `while` viene valutata prima di ogni iterazione: se è falsa già al primo controllo, il corpo non viene eseguito.
 
-Riferimenti: [Think Java, capitolo 6, sezione 6.3](https://chrismayfield.github.io/ThinkJava2/ch06.html) e [Java Language Specification, ciclo for](https://docs.oracle.com/javase/specs/jls/se25/html/jls-14.html#jls-14.14.1).
+Riferimenti: [Think Java, capitolo 6, sezione 6.1](https://chrismayfield.github.io/ThinkJava2/ch06.html) e [Java Language Specification, ciclo while](https://docs.oracle.com/javase/specs/jls/se25/html/jls-14.html#jls-14.12).
+
+Per recuperare il codice della **lezione 08 — Il ciclo for e i numeri pari**, puoi consultare il commit [`7bbf320`](https://github.com/luca4j/curriculum/commit/7bbf320d07572c84cb4e287a7fb31b8b8fd90a47). In quella versione il ciclo `for` visita i valori da `0` a `99` e stampa i numeri pari da `0` a `98`.
 
 Per recuperare il codice della **lezione 07 — boolean, if e else — decidere con le condizioni**, puoi consultare il commit [`0f89685`](https://github.com/luca4j/curriculum/commit/0f896855c1135e3f59108216d9f10bb0ab1bed8b). In quella versione il programma stampa `1.0`, `0.30000000000000004` e `Sono uguali`.
 
