@@ -16,21 +16,23 @@ Non si anticipa il codice prima della pubblicazione del video. Finché un video 
 
 Il repository evolve insieme al percorso video.
 
-Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 10 — Scorrere una stringa e ricostruire un numero**.
+Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 11 — Array di caratteri e confronto con for**.
 
-Video della lezione: [Java: scorrere una stringa e ricostruire un numero](https://www.youtube.com/watch?v=7vbBnrpDYfQ).
+Video della lezione: [Java: array di caratteri e confronto con for](https://www.youtube.com/watch?v=J5WwQ2nZJrw).
 
-Parto dalla stringa `"1234"` e leggo le cifre dalla fine con `charAt(i)`: `i` parte da `stringa.length() - 1` e diminuisce fino a `0` incluso. Il secondo contatore `j` parte da `0` e aumenta. `Character.getNumericValue` restituisce il valore numerico della cifra; `Math.pow(10, j)`, convertito a `int`, fornisce il peso delle unità, decine, centinaia e migliaia. `num` accumula questi contributi.
+Creo due `char[]`, leggo la lunghezza con `length` e accedo agli elementi da `0` a `length - 1`. Il confronto `==` tra due array confronta i riferimenti, non il contenuto. Per confrontare i caratteri uso un ciclo `for` e aggiorno `sonoUguali` con `&&` e `a == b`.
 
-Il sorgente finale stampa una sola riga:
+Il sorgente finale confronta `{'1', '2', '3', '4'}` e `{'1', '2', '3', '5'}` e stampa:
 
 ```text
-1234
+false
 ```
 
-Durante il video visualizzo anche risultati intermedi. Nel file finale la `println` è fuori dal ciclo. È un esercizio sulla stringa mostrata, non un convertitore generale: il programma non valida segni, separatori, caratteri non numerici o overflow. `length()` conta unità UTF-16 e `charAt()` ne legge una; per le cifre dell'esempio ogni carattere occupa una sola unità.
+Conservo il codice esattamente come registrato: il ciclo presume due array della stessa lunghezza. Se il secondo è più corto, l'accesso può uscire dai limiti; se è più lungo, gli elementi aggiuntivi non vengono confrontati. L'esercizio annunciato nel video consiste nel controllare prima le lunghezze ed eseguire il ciclo soltanto se sono uguali. Un `char[]` e una `String` sono tipi distinti.
 
-Riferimenti: [Think Java, capitolo 6, sezione 6.7](https://chrismayfield.github.io/ThinkJava2/ch06.html), [Character.getNumericValue](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Character.html#getNumericValue(char)) e [Math.pow](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Math.html#pow(double,double)).
+Riferimenti: [Think Java, capitolo 7](https://chrismayfield.github.io/ThinkJava2/ch07.html), [Java Language Specification, Arrays](https://docs.oracle.com/javase/specs/jls/se25/html/jls-10.html) e [Reference Equality Operators](https://docs.oracle.com/javase/specs/jls/se25/html/jls-15.html#jls-15.21.3).
+
+Per recuperare il codice della **lezione 10 — Scorrere una stringa e ricostruire un numero**, puoi consultare il commit [`fe68b23`](https://github.com/luca4j/curriculum/commit/fe68b23fd0314756e49a075053b8f153707ba8dd). In quella versione il ciclo legge le cifre di `"1234"` dalla fine e ricostruisce il numero con `Character.getNumericValue`, `Math.pow` e un accumulatore. Il sorgente finale stampa `1234`: è un esercizio sull'esempio mostrato, non un convertitore generale, e non valida segni, separatori, caratteri non numerici o overflow.
 
 Per recuperare il codice della **lezione 09 — Il ciclo while e il confronto con for**, puoi consultare il commit [`4129241`](https://github.com/luca4j/curriculum/commit/412924187b2b831fd2387c46e25006fd7d9d807c). In quella versione `while` visita i valori da `0` a `99` e l'`if` seleziona i 50 numeri pari da `0` a `98`.
 

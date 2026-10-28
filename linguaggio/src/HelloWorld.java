@@ -2,12 +2,14 @@ import java.util.Arrays;
 
 public class HelloWorld {
     public static void main(String[] args) {
-        int num = 0;
-        String stringa = "1234";
-        for(int i = stringa.length() - 1, j = 0; i >= 0; i--, j++) {
-            int digit = Character.getNumericValue(stringa.charAt(i));
-            num = num + digit * (int) Math.pow(10, j);
+        char[] stringa1 = new char[] {'1', '2', '3', '4'};
+        char[] stringa2 = new char[] {'1', '2', '3', '5'};
+        boolean sonoUguali = true;
+        for(int i = 0; i < stringa1.length; i++) {
+            char a = stringa1[i];
+            char b = stringa2[i];
+            sonoUguali = sonoUguali && a == b;
         }
-        System.out.println(num);
+        System.out.println(sonoUguali);
     }
 }
