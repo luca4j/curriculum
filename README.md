@@ -16,7 +16,24 @@ Non si anticipa il codice prima della pubblicazione del video. Finché un video 
 
 Il repository evolve insieme al percorso video.
 
-Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 11 — Array di caratteri e confronto con for**.
+Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 12 — Creare un metodo e confrontare array con Arrays.equals**.
+
+Video della lezione: [Java: creare un metodo e confrontare array con Arrays.equals](https://www.youtube.com/watch?v=ScyfWbFDAnw).
+
+Estraggo il confronto tra due array di caratteri in un metodo `arrayEquals`, con due parametri `char[]` e un risultato `boolean`. Riutilizzo il metodo per confrontare coppie diverse, poi sostituisco l'implementazione con `Arrays.equals` della libreria Java.
+
+Il sorgente finale conserva questa seconda versione, esattamente come registrata. I primi due array contengono gli stessi caratteri; il terzo termina con `'5'` anziché `'4'`. Il programma stampa:
+
+```text
+true
+false
+```
+
+`Arrays.equals` confronta lunghezza, elementi e ordine. Il metodo scritto a mano durante la lezione presume ancora array della stessa lunghezza: controllo delle lunghezze e uscita al primo elemento diverso restano gli esercizi proposti. `static` indica che il metodo appartiene alla classe; l'accessibilità dipende dai modificatori, come `public`. Nel video uso la forma classica `public static void main(String[] args)`; Java 25 supporta anche forme semplificate di `main`.
+
+Riferimenti: [Think Java, capitolo 4 — Methods and Testing](https://chrismayfield.github.io/ThinkJava2/ch04.html), [Arrays.equals per char[]](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Arrays.html#equals(char%5B%5D,char%5B%5D)), [JLS — metodi static](https://docs.oracle.com/javase/specs/jls/se25/html/jls-8.html#jls-8.4.3.2) e [JEP 512 — forme semplificate di main](https://openjdk.org/jeps/512). La ricorsione del capitolo 8 è annunciata come argomento successivo, non sviluppata in questa lezione.
+
+Per recuperare il codice della **lezione 11 — Array di caratteri e confronto con for**, puoi consultare il commit [`27ae496`](https://github.com/luca4j/curriculum/commit/27ae4968faecdb8478e56d319fec9d3007b97aa0).
 
 Video della lezione: [Java: array di caratteri e confronto con for](https://www.youtube.com/watch?v=J5WwQ2nZJrw).
 
