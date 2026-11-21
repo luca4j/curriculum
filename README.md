@@ -16,7 +16,23 @@ Non si anticipa il codice prima della pubblicazione del video. Finché un video 
 
 Il repository evolve insieme al percorso video.
 
-Il file `linguaggio/src/HelloWorld.java` presente su `main` corrisponde alla **lezione 12 — Creare un metodo e confrontare array con Arrays.equals**.
+Il file `linguaggio/src/Main.java` presente su `main` corrisponde alla **lezione 13 — Ricorsione, conto alla rovescia e Fibonacci**.
+
+Video della lezione: [Java: ricorsione, conto alla rovescia e Fibonacci](https://www.youtube.com/watch?v=Rhehsu3aURw).
+
+Costruisco due metodi che richiamano se stessi. `countdown(10)` stampa i numeri da 10 a 1 e poi `Fine`: il caso base è `n == 0`, mentre `countdown(n - 1)` riduce il problema. `fib(n)` restituisce un intero, usa i due casi base `0` e `1` e somma `fib(n - 1)` e `fib(n - 2)`. Le chiamate finali da `fib(0)` a `fib(5)` stampano, su righe separate, `0`, `1`, `1`, `2`, `3`, `5`.
+
+Per eseguire il sorgente dalla radice del repository con **Java 25**:
+
+```text
+java linguaggio/src/Main.java
+```
+
+Conservo il nome `Main`, il `main()` senza parametri e l'import inutilizzato così come registrati. `HelloWorld.java` resta invariato come esempio della lezione 12; per questa lezione va eseguito `Main.java`. I metodi lavorano con piccoli interi non negativi: l'esempio non gestisce valori negativi né overflow. La versione ricorsiva di Fibonacci ripete dei calcoli e serve a studiare il meccanismo, non a calcolare rapidamente valori grandi. `void` indica che un metodo non restituisce un valore.
+
+Riferimento: [Think Java, capitolo 8 — Recursive Methods](https://chrismayfield.github.io/ThinkJava2/ch08.html). Fibonacci è l'esempio aggiuntivo mostrato in questa registrazione; non sostituisce gli esercizi sul fattoriale del libro.
+
+Per recuperare il codice della **lezione 12 — Creare un metodo e confrontare array con Arrays.equals**, puoi consultare il commit [`a2d8c3f`](https://github.com/luca4j/curriculum/commit/a2d8c3fc43e912bd8ad1cf41e0cb82ed10ce9ac3).
 
 Video della lezione: [Java: creare un metodo e confrontare array con Arrays.equals](https://www.youtube.com/watch?v=ScyfWbFDAnw).
 
