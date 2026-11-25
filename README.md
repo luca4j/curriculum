@@ -16,7 +16,29 @@ Non si anticipa il codice prima della pubblicazione del video. Finché un video 
 
 Il repository evolve insieme al percorso video.
 
-Il file `linguaggio/src/Main.java` presente su `main` corrisponde alla **lezione 15 — Un menu interattivo con Scanner e switch**.
+Il file `linguaggio/src/Main.java` presente su `main` corrisponde alla **lezione 16 — La classe Point e la stima di pi greco con Monte Carlo**.
+
+Video: [Java: la classe Point e la stima di pi greco con Monte Carlo](https://www.youtube.com/watch?v=hS7twd4kwFs).
+
+Creo una classe `Point` con coordinate `x` e `y`, costruttore, getter e metodo di istanza `isInside`. Genero punti con `Math.random()` nel quadrato con coordinate da 0 incluso a 1 escluso. Conto quelli per cui `x² + y² <= 1` e stimo π con quattro volte il rapporto fra punti interni e punti totali.
+
+Esecuzione con **Java 25**, dalla radice del repository:
+
+```text
+java linguaggio/src/Main.java
+```
+
+Il ciclo parte da `i = 1` e termina prima di `1000000`: genera 999.999 punti e stampa una stima a ogni iterazione. Il risultato cambia fra esecuzioni e non garantisce un numero fisso di cifre corrette. La console può scorrere velocemente.
+
+Conservo il sorgente registrato, compreso l'import inutilizzato di `Scanner`. `Point` è una classe annidata statica dentro `Main`, non dentro il metodo `main`; `isInside` è invece un metodo di istanza. I getter sono una scelta per esporre i campi privati, non un obbligo generale del linguaggio.
+
+Nel metodo registrato il confronto è `Math.pow(x, 2) + Math.pow(y, 2) <= r`: qui lo chiamo sempre con `1`, quindi verifica correttamente il cerchio unitario, bordo incluso. Per un raggio generico R il confronto richiederebbe R²: il parametro attuale è una soglia sulla distanza al quadrato. Il rapporto usato nella stima è interni/totali, non interni/esterni. Non è presente una classe `Circle`.
+
+Esercizio: prova il limite del ciclo a 100, 10000 e 1000000, ripeti ogni prova e confronta l'ultima stima. Più punti tendono a ridurre l'errore, senza garantire un miglioramento in ogni singola esecuzione.
+
+Riferimento sulle classi: [Think Java, capitolo 11](https://chrismayfield.github.io/ThinkJava2/ch11.html). L'esempio Monte Carlo del filmato è una scelta autonoma e non riproduce la classe Time del capitolo.
+
+Per recuperare il codice della **lezione 15 — Un menu interattivo con Scanner e switch**, consulta il commit [`0b78b33`](https://github.com/luca4j/curriculum/commit/0b78b331eadcb15b315b7547a36f4dd81f592944).
 
 Il ramo `main` contiene soltanto i sorgenti dell'esempio corrente. `Main.java` ha sostituito `HelloWorld.java` dalla lezione 13: il vecchio file, rimasto per errore fino alla pubblicazione della lezione 15, è stato rimosso con una correzione successiva. Per gli esempi precedenti usa i commit delle rispettive lezioni elencati sotto.
 
