@@ -18,6 +18,8 @@ Il repository evolve insieme al percorso video.
 
 Il file `linguaggio/src/Main.java` presente su `main` corrisponde alla **lezione 15 — Un menu interattivo con Scanner e switch**.
 
+Il ramo `main` contiene soltanto i sorgenti dell'esempio corrente. `Main.java` ha sostituito `HelloWorld.java` dalla lezione 13: il vecchio file, rimasto per errore fino alla pubblicazione della lezione 15, è stato rimosso con una correzione successiva. Per gli esempi precedenti usa i commit delle rispettive lezioni elencati sotto.
+
 Video della lezione: [Java: un menu interattivo con Scanner e switch](https://www.youtube.com/watch?v=nPPJF_RQPbQ).
 
 Riprendo il FizzBuzz ricorsivo della lezione 14 e leggo i numeri da tastiera con `Scanner`, `System.in` e `nextInt()`. Il menu offre `1. FizzBuzz` e `2. Esci`: lo `switch` sceglie il ramo e il ciclo `do while` ripresenta il menu finché la scelta è diversa da `2`. Quando scelgo `2`, il programma stampa `Goodbye!` e chiude lo scanner.
@@ -30,7 +32,7 @@ java linguaggio/src/Main.java
 
 Puoi ripetere la prova del video: scegli `1`, inserisci `15`, scegli ancora `1`, inserisci `27`, poi scegli `2`. FizzBuzz stampa dal numero scelto fino a `1`, sostituendo i multipli di 3 con `Fizz`, quelli di 5 con `Buzz` e quelli di entrambi con `FizzBuzz`.
 
-Conservo il sorgente registrato, compreso l'import inutilizzato di `Arrays`. L'esempio presume input interi e numeri non negativi piccoli per FizzBuzz: non gestisce testo non numerico, input esaurito, valori negativi o una ricorsione troppo profonda. Le scelte intere diverse da `1` e `2` ripropongono il menu, senza un ramo `default`. Chiudere questo scanner chiude anche `System.in`; qui lo faccio solo alla fine del programma. `HelloWorld.java` resta l'esempio della lezione 12.
+Conservo il sorgente registrato, compreso l'import inutilizzato di `Arrays`. L'esempio presume input interi e numeri non negativi piccoli per FizzBuzz: non gestisce testo non numerico, input esaurito, valori negativi o una ricorsione troppo profonda. Le scelte intere diverse da `1` e `2` ripropongono il menu, senza un ramo `default`. Chiudere questo scanner chiude anche `System.in`; qui lo faccio solo alla fine del programma.
 
 Riferimenti mostrati nel video: [Think Java, capitolo 3 — Input and Output](https://chrismayfield.github.io/ThinkJava2/ch03.html) e [capitolo 5 — Conditionals and Logic](https://chrismayfield.github.io/ThinkJava2/ch05.html).
 
@@ -64,7 +66,7 @@ Per eseguire il sorgente dalla radice del repository con **Java 25**:
 java linguaggio/src/Main.java
 ```
 
-Conservo il nome `Main`, `main(String... args)`, i commenti e l'import inutilizzato di `java.util.Arrays` così come registrati. `HelloWorld.java` resta l'esempio della lezione 12. L'esempio usa un intero non negativo piccolo e non gestisce `n` negativo. FizzBuzz non è un esercizio di Think Java: lo uso per unire le condizioni e la chiamata ricorsiva.
+Conservo il nome `Main`, `main(String... args)`, i commenti e l'import inutilizzato di `java.util.Arrays` così come registrati. L'esempio usa un intero non negativo piccolo e non gestisce `n` negativo. FizzBuzz non è un esercizio di Think Java: lo uso per unire le condizioni e la chiamata ricorsiva.
 
 Riferimento: [Think Java, capitolo 8 — Recursive Methods](https://chrismayfield.github.io/ThinkJava2/ch08.html). Il fattoriale mostrato dal libro in quel capitolo non fa parte di questa lezione.
 
