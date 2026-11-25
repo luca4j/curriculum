@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     // fizz buzz divisibile per tre e per cinque
@@ -25,6 +26,24 @@ public class Main {
     }
 
     public static void main(String... args) {
-        fizzbuzz(15);
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
+        do {
+            System.out.println("1. FizzBuzz");
+            System.out.println("2. Esci");
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.print("Please enter a number: ");
+                    int n = scanner.nextInt();
+                    fizzbuzz(n);
+                    break;
+                case 2:
+                    System.out.println("Goodbye!");
+                    break;
+            }
+        } while(choice != 2);
+        scanner.close();
     }
 }

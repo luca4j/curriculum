@@ -16,7 +16,25 @@ Non si anticipa il codice prima della pubblicazione del video. Finché un video 
 
 Il repository evolve insieme al percorso video.
 
-Il file `linguaggio/src/Main.java` presente su `main` corrisponde alla **lezione 14 — FizzBuzz ricorsivo**.
+Il file `linguaggio/src/Main.java` presente su `main` corrisponde alla **lezione 15 — Un menu interattivo con Scanner e switch**.
+
+Video della lezione: [Java: un menu interattivo con Scanner e switch](https://www.youtube.com/watch?v=nPPJF_RQPbQ).
+
+Riprendo il FizzBuzz ricorsivo della lezione 14 e leggo i numeri da tastiera con `Scanner`, `System.in` e `nextInt()`. Il menu offre `1. FizzBuzz` e `2. Esci`: lo `switch` sceglie il ramo e il ciclo `do while` ripresenta il menu finché la scelta è diversa da `2`. Quando scelgo `2`, il programma stampa `Goodbye!` e chiude lo scanner.
+
+Per eseguire dalla radice del repository con **Java 25**:
+
+```text
+java linguaggio/src/Main.java
+```
+
+Puoi ripetere la prova del video: scegli `1`, inserisci `15`, scegli ancora `1`, inserisci `27`, poi scegli `2`. FizzBuzz stampa dal numero scelto fino a `1`, sostituendo i multipli di 3 con `Fizz`, quelli di 5 con `Buzz` e quelli di entrambi con `FizzBuzz`.
+
+Conservo il sorgente registrato, compreso l'import inutilizzato di `Arrays`. L'esempio presume input interi e numeri non negativi piccoli per FizzBuzz: non gestisce testo non numerico, input esaurito, valori negativi o una ricorsione troppo profonda. Le scelte intere diverse da `1` e `2` ripropongono il menu, senza un ramo `default`. Chiudere questo scanner chiude anche `System.in`; qui lo faccio solo alla fine del programma. `HelloWorld.java` resta l'esempio della lezione 12.
+
+Riferimenti mostrati nel video: [Think Java, capitolo 3 — Input and Output](https://chrismayfield.github.io/ThinkJava2/ch03.html) e [capitolo 5 — Conditionals and Logic](https://chrismayfield.github.io/ThinkJava2/ch05.html).
+
+Per recuperare il codice della **lezione 14 — FizzBuzz ricorsivo**, puoi consultare il commit [`3e61a8b`](https://github.com/luca4j/curriculum/commit/3e61a8b5b6a89992373df2633eb968410972ca8e).
 
 Video della lezione: [Java: FizzBuzz ricorsivo](https://www.youtube.com/watch?v=bmSa43BKwE8).
 
