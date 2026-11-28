@@ -16,9 +16,31 @@ Non si anticipa il codice prima della pubblicazione del video. Finché un video 
 
 Il repository evolve insieme al percorso video.
 
-Il file `linguaggio/src/Main.java` presente su `main` corrisponde alla **lezione 16 — La classe Point e la stima di pi greco con Monte Carlo**.
+Il file `linguaggio/src/Main.java` presente su `main` corrisponde alla **lezione 17 — Gli enum e un cursore da muovere con le frecce**.
 
-Video: [Java: la classe Point e la stima di pi greco con Monte Carlo](https://www.youtube.com/watch?v=hS7twd4kwFs).
+Video: [Java: gli enum e un cursore da muovere con le frecce](https://www.youtube.com/watch?v=T6TQApqJCYg).
+
+Definisco un tipo enumerato `Direction` con quattro valori: `UP`, `DOWN`, `LEFT` e `RIGHT`. Leggo un tasto alla volta con `System.in.read()`, lo trasformo in una `Direction` con uno `switch` usato come espressione e, con un secondo `switch`, sposto un cursore `@` su una griglia 5×5 stampata nel terminale. `Math.floorMod` tiene le coordinate fra 0 e 4: attraversando un bordo il cursore rientra dal lato opposto. Il ciclo `do while` ridisegna la griglia finché non premo `q`.
+
+Il programma va eseguito in un terminale macOS o Linux, non nella console Run dell'IDE. Con **Java 25**, dalla radice del repository:
+
+```text
+java linguaggio/src/Main.java
+```
+
+All'avvio il programma lancia `stty -icanon -echo`, così il terminale consegna ogni tasto senza aspettare Invio; all'uscita con `q` ripristina le impostazioni con `stty sane`. Se interrompi con Ctrl+C, digita `stty sane` e premi Invio per riavere l'eco dei tasti. Su Windows `stty` non è disponibile.
+
+Una freccia arriva come tre caratteri: ESC, `[` e una lettera, `A` per su, `B` per giù, `C` per destra e `D` per sinistra. Lo `switch` guarda solo la lettera: per gli altri caratteri la direzione è `null` e la posizione non cambia. Anche le maiuscole `A`, `B`, `C` e `D` digitate a mano muovono il cursore.
+
+Conservo il sorgente registrato, compreso l'import inutilizzato di `Scanner`. Nel sorgente i nomi `UP` e `DOWN` sono scambiati due volte: la freccia su (`A`) produce `Direction.DOWN`, e `DOWN` esegue `y--`. La riga 0 è in alto, quindi il cursore sale e il movimento a schermo è corretto. La pulizia dello schermo usa `println`, che aggiunge una riga vuota sopra il messaggio.
+
+Esercizio: sistema i nomi senza cambiare il comportamento, in modo che la freccia su produca `Direction.UP` e che `UP` faccia salire il cursore. Poi porta `size` a 8 e verifica che il rientro dai bordi funzioni ancora.
+
+Riferimenti: [Think Java, capitolo 12](https://chrismayfield.github.io/ThinkJava2/ch12.html), che nel video uso come punto di partenza: il libro codifica semi e valori delle carte con numeri interi e non tratta gli enum. Per gli enum: [Enum Types, tutorial Java](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html) e [Java Language Specification, Enum Classes](https://docs.oracle.com/javase/specs/jls/se25/html/jls-8.html#jls-8.9). Per il resto: [Math.floorMod](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Math.html#floorMod(int,int)).
+
+Per recuperare il codice della **lezione 16 — La classe Point e la stima di pi greco con Monte Carlo**, consulta il commit [`c23d33c`](https://github.com/luca4j/curriculum/commit/c23d33c64e61680c32842142a5b022bb60e379ec).
+
+Video della lezione: [Java: la classe Point e la stima di pi greco con Monte Carlo](https://www.youtube.com/watch?v=hS7twd4kwFs).
 
 Creo una classe `Point` con coordinate `x` e `y`, costruttore, getter e metodo di istanza `isInside`. Genero punti con `Math.random()` nel quadrato con coordinate da 0 incluso a 1 escluso. Conto quelli per cui `x² + y² <= 1` e stimo π con quattro volte il rapporto fra punti interni e punti totali.
 
